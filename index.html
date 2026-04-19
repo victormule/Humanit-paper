@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L'Humanité - 1907</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Voile noir initial -->
+    <div id="cinematic-veil"></div>
+
+    <!-- Filtre SVG grain/rugosité pour le titre -->
+    <svg class="svg-filters" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="rough" x="-8%" y="-8%" width="116%" height="116%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.065" numOctaves="4" seed="3" result="noise"></feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+            </filter>
+        </defs>
+    </svg>
+
+    <div class="viewport">
+        <div class="wrap" id="main-wrap">
+
+            <!-- TITRE -->
+            <div class="titre-bloc" id="titre-bloc">
+                <h1 aria-label="L'Humanité"></h1>
+                <span class="grand-titre" translate="no" id="grand-titre" data-original="l'Humanité">l'Humanité</span>
+            </h1>
+            </div>
+
+            <!-- META ROW -->
+            <div class="meta-row" id="meta-row">
+                <div class="meta-gauche" id="meta-gauche">QUATRIEME ANNEE. — N° 997.</div>
+                <div class="meta-centre" id="meta-centre">JOURNAL SOCIALISTE QUOTIDIEN</div>
+                <div class="meta-droite" id="meta-droite">MERCREDI 9 JANVIER 1907.</div>
+            </div>
+
+            <!-- GRILLE INFORMATIONS -->
+            <div class="grille draw-border-top" id="grille">
+
+                <!-- Prix gauche -->
+                <div class="col col-prix" id="col-0">
+                    <div class="prix-haut">
+                        <span class="chiffre-5">5</span><span class="lettre-c">C.</span>
+                    </div>
+                    <div class="prix-bas">Le Numéro</div>
+                </div>
+
+                <!-- Rédaction -->
+                <div class="col col-redac" id="col-1">
+                    <div class="redac-titre">RÉDACTION, ADMINISTRATION &amp; ANNONCES</div>
+                    <div class="redac-adresse">110, Rue Richelieu, Paris</div>
+                    <div class="redac-disclaimer">
+                        Tout ce qui concerne l'Administration du journal doit être adressé<br>
+                        à l'Administrateur.
+                    </div>
+                    <div class="redac-tel">TÉLÉPHONE : 102-69</div>
+                </div>
+
+                <!-- Directeur -->
+                <div class="col col-directeur" id="col-2">
+                    <div class="dir-label">Directeur Politique :</div>
+                    <div class="dir-nom">JEAN JAURÈS</div>
+                </div>
+
+                <!-- Abonnements -->
+                <div class="col col-abos" id="col-3">
+                    <div class="abos-entete">
+                        <span>ABONNEMENTS</span>
+                        <span class="col-paris">Paris &amp; Dép.</span>
+                        <span class="col-etr">Étranger</span>
+                    </div>
+
+                    <div class="abos-ligne">
+                        <span class="abos-nom">
+                            <span class="abos-mot">Un Mois</span>
+                            <span class="abos-points">............................................</span>
+                        </span>
+                        <span class="px-paris">1 fr. 50</span>
+                        <span class="px-etr">»&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; »</span>
+                    </div>
+
+                    <div class="abos-ligne">
+                        <span class="abos-nom">
+                            <span class="abos-mot">Trois Mois</span>
+                            <span class="abos-points">...........................................</span>
+                        </span>
+                        <span class="px-paris">4 fr. 50</span>
+                        <span class="px-etr">9 fr. &nbsp;&nbsp;&nbsp;»</span>
+                    </div>
+
+                    <div class="abos-ligne">
+                        <span class="abos-nom">
+                            <span class="abos-mot">Six Mois</span>
+                            <span class="abos-points">...............................................</span>
+                        </span>
+                        <span class="px-paris">9 fr.&nbsp;&nbsp; »</span>
+                        <span class="px-etr">16 fr. 50</span>
+                    </div>
+
+                    <div class="abos-ligne">
+                        <span class="abos-nom">
+                            <span class="abos-mot">Un An</span>
+                            <span class="abos-points">..................................................</span>
+                        </span>
+                        <span class="px-paris">18 fr.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <span class="px-etr">31 fr.&nbsp;&nbsp;&nbsp; »</span>
+                    </div>
+
+                    <div class="abos-pied">
+                        Les Abonnements sont reçus SANS FRAIS dans tous les bureaux de Poste.
+                    </div>
+                </div>
+
+                <!-- Prix droit -->
+                <div class="col col-prix" id="col-4">
+                    <div class="prix-haut">
+                        <span class="chiffre-5">5</span><span class="lettre-c">C.</span>
+                    </div>
+                    <div class="prix-bas">Le Numéro</div>
+                </div>
+
+            </div><!-- /grille -->
+
+            <!-- ARTICLE -->
+            <div class="article-main" id="article-main">
+                <div class="article-inner">
+
+                    <h1 class="article-title"><br>Le meurtrier de Kléber</h1>
+                    <br>
+
+                    <div class="article-column" id="article-column">
+
+                        <!-- Légende marge gauche -->
+                        <div id="marge-titre"></div>
+<div id="marge-droite"></div>
+                        <!-- Bouton fermer média -->
+                        <button class="video-close" id="video-close" type="button" aria-label="Fermer la vidéo">Fermer</button>
+
+                        <div class="article-stage" id="article-stage">
+
+                            <!-- Couche texte -->
+                            <div class="article-text-layer" id="article-text-layer">
+                                <div class="article-body-wrap">
+
+                                    <!-- Gabarit dimensionnel (invisible, sert à réserver l'espace) -->
+                                    <div class="article-body article-body-reserve" aria-hidden="true">
+                                        <p>On vient d'exposer dans les galeries du pavillon d'anatomie comparée, au Muséum, un squelette qui n'y figure d'ailleurs qu'à titre de pièce anatomique, mais qui a son histoire.</p>
+                                        <p>Ce squelette est celui de Souleiman el Aleby, le meurtrier de Kléber.</p>
+                                        <p>Souleiman el Aleby n'était point un meurtrier vulgaire. Il avait été <span class="mot-clef" data-key="condamne" data-categorie="Démesure" data-titre="« Condamné par le conseil de guerre »">condamné par le conseil de guerre</span> du Caire à avoir la main droite brûlée, à être empalé et exposé aux oiseaux de proie, simplement.</p>
+                                        <p>Il subit sa peine le 25 prairial an VIII. Il étendit sur le bûcher la main qui avait frappé le général français, et la laissa griller sans proférer une plainte, sans qu'un muscle de son visage trahît <span class="mot-clef" data-key="souffrance" data-categorie="Témoignage Guillaume" data-titre="« Horrible souffrance »">l'horrible souffrance</span> qu'il endurait. Mais <span class="mot-clef" data-key="bourreau" data-categorie="L'âme noire" data-titre="« le bourreau »">le bourreau</span> qui attisait le brasier ayant laissé tomber son tisonnier rouge sur le bras du condamné, Souleiman el Aleby protesta avec violence :</p>
+                                        <p>— <span class="mot-clef" data-key="supplice" data-categorie="Au tribunal" data-titre="« Ce supplice, cria-t-il, n'est pas dans mon jugement. »">Ce supplice, cria-t-il, n'est pas dans mon jugement.</span></p>
+                                        <p>Et ce fut la seule révolte du musulman, qui subit jusqu'au bout sa peine avec le même stoïcisme.</p>
+                                    </div>
+
+                                    <!-- Zone remplie dynamiquement par la machine à écrire -->
+                                    <div class="article-body article-body-typing" id="article-body"></div>
+
+                                </div>
+                            </div>
+
+                            <!-- Couche média (vidéo / audio) -->
+                            <div class="article-video-layer" id="article-video-layer" aria-hidden="true">
+
+                                <!-- Panneau vidéo -->
+                                <div class="video-panel" id="media-panel-video">
+                                    <video id="article-video" controls playsinline preload="metadata"></video>
+                                </div>
+
+                                <!-- Panneau audio -->
+                                <div class="video-panel" id="media-panel-audio" style="display:none;">
+                                    <div class="audio-stage">
+                                        <button class="audio-toggle" id="audio-toggle">Lecture</button>
+                                        <div class="audio-progress">
+                                            <div class="audio-bar" id="audio-bar"></div>
+                                        </div>
+                                        <audio id="article-audio" preload="metadata">
+                                            <track id="audio-track" kind="subtitles" src="temoignage-guillaume.vtt" srclang="fr" default>
+                                        </audio>
+                                        <div class="audio-subtitles" id="audio-subtitles"></div>
+                                    </div>
+                                </div>
+
+                            </div><!-- /article-video-layer -->
+
+                            <!-- Rideaux de transition -->
+                            <div class="curtain curtain--left"       aria-hidden="true"></div>
+                            <div class="curtain curtain--right"      aria-hidden="true"></div>
+                            <div class="curtain-line curtain-line--left"  aria-hidden="true"></div>
+                            <div class="curtain-line curtain-line--right" aria-hidden="true"></div>
+
+                        </div><!-- /article-stage -->
+                    </div><!-- /article-column -->
+
+                    <br>
+
+                    <!-- Source du contenu pour la machine à écrire -->
+                    <template id="article-content-template" translate="no">
+                        <p>On vient d'exposer dans les galeries du pavillon d'anatomie comparée, au Muséum, un squelette qui n'y figure d'ailleurs qu'à titre de pièce anatomique, mais qui a son histoire.</p>
+                        <p>Ce squelette est celui de Souleiman el Aleby, le meurtrier de Kléber.</p>
+                        <p>Souleiman el Aleby n'était point un meurtrier vulgaire. Il avait été <span class="mot-clef" data-key="condamne" data-categorie="Démesure" data-titre="« Condamné par le conseil de guerre »">condamné par le conseil de guerre</span> du Caire à avoir la main droite brûlée, à être empalé et exposé aux oiseaux de proie, simplement.</p>
+                        <p>Il subit sa peine le 25 prairial an VIII. Il étendit sur le bûcher la main qui avait frappé le général français, et la laissa griller sans proférer une plainte, sans qu'un muscle de son visage trahît <span class="mot-clef" data-key="souffrance" data-categorie="Témoignage Guillaume" data-titre="« Horrible souffrance »">l'horrible souffrance</span> qu'il endurait. Mais <span class="mot-clef" data-key="bourreau" data-categorie="L'âme noire" data-titre="« le bourreau »">le bourreau</span> qui attisait le brasier ayant laissé tomber son tisonnier rouge sur le bras du condamné, Souleiman el Aleby protesta avec violence :</p>
+                        <p>— <span class="mot-clef" data-key="supplice" data-categorie="Au tribunal" data-titre="« Ce supplice, cria-t-il, n'est pas dans mon jugement. »">Ce supplice, cria-t-il, n'est pas dans mon jugement.</span></p>
+                        <p>Et ce fut la seule révolte du musulman, qui subit jusqu'au bout sa peine avec le même stoïcisme.</p>
+                    </template>
+
+                </div><!-- /article-inner -->
+
+                <!-- Pied de page — pleine largeur du journal -->
+                <div class="article-footer-meta">
+                    <div class="article-footer-left">Article extrait du journal l'Humanité N°5 de 1907</div>
+                    <div class="article-footer-right">ABOUNADDARA - CNRS - 2026</div>
+                </div>
+
+            </div><!-- /article-main -->
+
+        </div><!-- /wrap -->
+    </div><!-- /viewport -->
+
+    <script src="script.js"></script>
+</body>
+</html>
